@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG08 GrassLand - AGDev</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome cho Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .hero-banner {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
+            margin-bottom: 2rem;
+            height: 400px;
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.02);
+            transition: transform 10s ease;
+        }
+
+        .hero-banner:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-img {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(74, 222, 128, 0.5);
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body class="font-body antialiased relative">
+
+    <!-- Lưới nền grid mờ giống Cyberpunk -->
+    <div class="fixed inset-0 z-[-1] opacity-10"
+        style="background-image: linear-gradient(#4ade80 1px, transparent 1px), linear-gradient(90deg, #4ade80 1px, transparent 1px); background-size: 30px 30px;">
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 top-0 bg-dark/80 backdrop-blur-md border-b border-green-400/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center text-gray-300 hover:text-green-400 transition-colors">
+                        <i class="fas fa-arrow-left mr-2"></i> <span class="font-bold">Back to Portfolio</span>
+                    </a>
+                </div>
+                <div>
+                    <span class="font-heading text-xl font-bold text-green-400">AG08-GrassLand</span>
+                </div>
+                <div>
+                    <a href="https://github.com/AnhNgoo/AG08_GrassLand.git" target="_blank"
+                        class="text-gray-300 hover:text-green-400 text-2xl transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="pt-24 pb-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- HEADER -->
+        <header class="text-center mb-12" data-aos="fade-down">
+            <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4 drop-shadow-lg">AG08<span
+                    class="text-green-400">_GrassLand</span></h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Dự án Solo game phiêu lưu Story-driven ở môi trường thế giới mở rộng lớn.
+            </p>
+            <div class="flex justify-center flex-wrap gap-3 mt-6">
+                <span
+                    class="px-3 py-1 bg-green-900/30 border border-green-400/50 text-green-400 rounded-full text-sm font-bold shadow-[0_0_10px_rgba(74,222,128,0.2)]">Unity
+                    2D</span>
+                <span
+                    class="px-3 py-1 bg-green-900/30 border border-green-400/50 text-green-400 rounded-full text-sm font-bold shadow-[0_0_10px_rgba(74,222,128,0.2)]">Open
+                    World Gameplay</span>
+                <span
+                    class="px-3 py-1 bg-green-900/30 border border-green-400/50 text-green-400 rounded-full text-sm font-bold shadow-[0_0_10px_rgba(74,222,128,0.2)]">Story
+                    RPG</span>
+            </div>
+        </header>
+
+        <!-- HERO BANNER -->
+        <section class="mb-16" data-aos="zoom-in" data-aos-delay="200">
+            <div class="bg-panel p-2 border border-gray-800 rounded-2xl shadow-panel">
+                <div class="hero-banner shadow-[0_0_15px_rgba(74,222,128,0.2)]">
+                    <img src="image/GrassLand/Logo.png" alt="GrassLand Banner">
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT DESCRIPTION -->
+        <section class="mb-16 bg-panel border border-green-400/20 rounded-2xl p-8 shadow-panel" data-aos="fade-up">
+            <h2 class="text-3xl font-heading font-bold text-white mb-6 border-b border-gray-700 pb-4">
+                <i class="fas fa-leaf text-green-400 mr-2"></i> Chi tiết Dự án
+            </h2>
+            <div class="space-y-4 text-lg text-gray-300">
+                <p>
+                    <strong>AG08_GrassLand</strong> tập trung vào việc tạo ra cảm giác thư giãn thông qua môi trường cỏ
+                    xanh ngát, hệ thống bóng râm cây cối mượt mà (Baked/Realtime Shadows hỗn hợp) và hiệu ứng thị giác
+                    tươi sáng, ấm áp.
+                </p>
+                <div class="bg-dark p-6 rounded-xl border border-gray-800 my-6">
+                    <h3 class="text-xl font-bold text-white mb-3">Những điểm nhấn kỹ thuật:</h3>
+                    <ul class="list-disc pl-6 space-y-2 mt-4">
+                        <li><strong class="text-green-400">Optimization:</strong> Sử dụng LOD (Level of Detail),
+                            Occlusion Culling để render hàng rào cây cỏ số lượng lớn mà vãn duy trì FPS tốt.</li>
+                        <li><strong class="text-green-400">Hệ thống Nhiệm vụ:</strong> Quản lý quest line trạng thái,
+                            kích hoạt Cutscene (Cinemachine) khi người chơi tới các Zone đặc biệt.</li>
+                        <li><strong class="text-green-400">Hệ thống Âm thanh 2D:</strong> Sử dụng AudioMixer
+                            Settings trong Unity mang lại độ chân thực về khoảng cách suối chảy, tiếng xào xạc cành lá
+                            rẽ gió của môi trường xung quanh.</li>
+                        <li><strong class="text-green-400">Chuyển động mượt mà:</strong> Animator được cấu hình kỹ với
+                            Blend Tree, đáp ứng chuẩn Input chuột và phím.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-heading font-bold text-white mb-8 border-l-4 border-green-400 pl-4"
+                data-aos="fade-right">
+                Môi Trường In-Game Sinh Động
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="100">
+                    <img src="image/GrassLand/1.png" alt="GrassLand Screenshot 1"
+                        class="w-full h-64 object-cover gallery-img">
+                </div>
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="200">
+                    <img src="image/GrassLand/2.png" alt="GrassLand Screenshot 2"
+                        class="w-full h-64 object-cover gallery-img">
+                </div>
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="100">
+                    <img src="image/GrassLand/3.png" alt="GrassLand Screenshot 3"
+                        class="w-full h-64 object-cover gallery-img">
+                </div>
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="200">
+                    <img src="image/GrassLand/4.png" alt="GrassLand Screenshot 4"
+                        class="w-full h-64 object-cover gallery-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <div class="text-center" data-aos="zoom-in">
+            <a href="https://github.com/AnhNgoo/AG08_GrassLand.git" target="_blank"
+                class="inline-flex items-center px-8 py-4 bg-transparent border-2 border-green-400 text-green-400 font-bold rounded-lg hover:bg-green-400 hover:text-dark transition-all duration-300 transform hover:-translate-y-1 text-lg shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:shadow-[0_0_25px_rgba(74,222,128,0.6)]">
+                <i class="fab fa-github mr-3 text-2xl"></i> Khám phá Thế giới trên GitHub
+            </a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-800 bg-dark py-6 mt-10">
+        <div class="text-center text-sm text-gray-500">
+            <p>&copy; 2024 Ngô Quốc Anh (AGDev). Tự hào Code bằng đam mê.</p>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out-cubic',
+            offset: 50,
+        });
+    </script>
+</body>
+
+</html>

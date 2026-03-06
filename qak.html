@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRO124-QAK - AGDev</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome cho Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-img {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body class="font-body antialiased relative">
+
+    <!-- Lưới nền grid mờ giống Cyberpunk -->
+    <div class="fixed inset-0 z-[-1] opacity-10"
+        style="background-image: linear-gradient(#3b82f6 1px, transparent 1px), linear-gradient(90deg, #3b82f6 1px, transparent 1px); background-size: 30px 30px;">
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 top-0 bg-dark/80 backdrop-blur-md border-b border-blue-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center text-gray-300 hover:text-blue-400 transition-colors">
+                        <i class="fas fa-arrow-left mr-2"></i> <span class="font-bold">Back to Portfolio</span>
+                    </a>
+                </div>
+                <div>
+                    <span class="font-heading text-xl font-bold text-blue-400">PRO124-QAK</span>
+                </div>
+                <div>
+                    <a href="https://github.com/AnhNgoo/PRO124-QAK.git" target="_blank"
+                        class="text-gray-300 hover:text-blue-400 text-2xl transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="pt-24 pb-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- HEADER -->
+        <header class="text-center mb-12" data-aos="fade-down">
+            <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4 drop-shadow-lg">PRO124<span
+                    class="text-blue-400">-QAK</span></h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Dự án game làm việc nhóm. Chịu trách nhiệm thiết kế UI/UX và lập trình Giao diện.
+            </p>
+            <div class="flex justify-center flex-wrap gap-3 mt-6">
+                <span
+                    class="px-3 py-1 bg-blue-900/30 border border-blue-500/50 text-blue-400 rounded-full text-sm font-bold shadow-[0_0_10px_rgba(59,130,246,0.2)]">Unity
+                    3D</span>
+                <span
+                    class="px-3 py-1 bg-blue-900/30 border border-blue-500/50 text-blue-400 rounded-full text-sm font-bold shadow-[0_0_10px_rgba(59,130,246,0.2)]">UI/UX
+                    Design</span>
+                <span
+                    class="px-3 py-1 bg-blue-900/30 border border-blue-500/50 text-blue-400 rounded-full text-sm font-bold shadow-[0_0_10px_rgba(59,130,246,0.2)]">Teamwork</span>
+                <span
+                    class="px-3 py-1 bg-blue-900/30 border border-blue-500/50 text-blue-400 rounded-full text-sm font-bold shadow-[0_0_10px_rgba(59,130,246,0.2)]">Action</span>
+            </div>
+        </header>
+
+        <!-- TRAILER / GAMEPLAY VIDEO -->
+        <section class="mb-16" data-aos="zoom-in" data-aos-delay="200">
+            <div class="bg-panel p-2 border border-gray-800 rounded-2xl shadow-panel">
+                <div class="video-container shadow-[0_0_15px_rgba(59,130,246,0.2)] inline-block w-full">
+                    <video controls autoplay muted loop>
+                        <source src="video/QAK/QAK.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT DESCRIPTION -->
+        <section class="mb-16 bg-panel border border-blue-500/20 rounded-2xl p-8 shadow-panel" data-aos="fade-up">
+            <h2 class="text-3xl font-heading font-bold text-white mb-6 border-b border-gray-700 pb-4">
+                <i class="fas fa-layer-group text-blue-400 mr-2"></i> Chi tiết Dự án
+            </h2>
+            <div class="space-y-4 text-lg text-gray-300">
+                <p>
+                    <strong>PRO124-QAK</strong> là tựa game thể loại Action 3D được phát triển bởi một đội ngũ gồm các
+                    lập trình viên trẻ đam mê.
+                    Mỗi thành viên trong nhóm phụ trách một mảng riêng biệt, từ logic Gameplay, thiết kế Màn chơi, AI
+                    Quái vật cho tới Quản lý Database.
+                </p>
+                <div class="bg-dark p-6 rounded-xl border border-gray-800 my-6">
+                    <h3 class="text-xl font-bold text-white mb-3">Vai trò: UI/UX & Frontend Developer</h3>
+                    <ul class="list-disc pl-6 space-y-2 mt-4">
+                        <li><strong class="text-blue-400">Main Menu Hệ thống:</strong> Thiết kế Giao diện trực quan,
+                            Navigation mượt mà. Đảm bảo hỗ trợ cả người điều khiển bàn phím hoặc Controller.</li>
+                        <li><strong class="text-blue-400">In-game HUD:</strong> Hiển thị hiệu quả thanh Máu (HP), Năng
+                            lượng (MP), skill cooldowns, minimap, nhiệm vụ mà không cản trở góc nhìn người chơi.</li>
+                        <li><strong class="text-blue-400">Inventory UI:</strong> Thiết kế lưới hành trang sinh động,
+                            Drag/Drop item thân thiện, hiển thị Attributes của Items rõ ràng.</li>
+                        <li><strong class="text-blue-400">Polish mượt mà:</strong> Áp dụng Tween Animation (chẳng hạn
+                            dùng DOTween) cho các Popup menus để đem lại cảm giác tự nhiên, mượt mà chuẩn game thương
+                            mại.</li>
+                    </ul>
+                </div>
+                <p>
+                    Làm việc nhóm trên GitHub đòi hỏi việc giải quyết Conflict trong Unity scenes hiệu quả.
+                    Nhóm đã lập ra quy trình làm việc chuẩn, giúp việc merge code tránh được lỗi và tiến độ được bảo
+                    đảm.
+                </p>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-heading font-bold text-white mb-8 border-l-4 border-blue-400 pl-4"
+                data-aos="fade-right">
+                Hình Ảnh Giao Diện & Màn Chơi
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="100">
+                    <img src="image/QAK/1.png" alt="QAK Screenshot 1" class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="200">
+                    <img src="image/QAK/2.png" alt="QAK Screenshot 2" class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="300">
+                    <img src="image/QAK/3.png" alt="QAK Screenshot 3" class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="100">
+                    <img src="image/QAK/4.png" alt="QAK Screenshot 4" class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="200">
+                    <img src="image/QAK/5.png" alt="QAK Screenshot 5" class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div data-aos="flip-up" data-aos-delay="300"
+                    class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group border-purple-500/50 relative">
+                    <div class="absolute inset-0 bg-purple-900/20 z-0 pointer-events-none"></div>
+                    <img src="image/QAK/Trello.png" alt="Trello Planning QAK"
+                        class="w-full h-48 object-cover gallery-img relative z-10">
+                    <div
+                        class="absolute bottom-0 w-full bg-dark/80 text-center py-2 text-xs font-bold text-purple-300 z-10 pointer-events-none">
+                        Tổ chức công việc nhóm bằng Trello
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <div class="text-center" data-aos="zoom-in">
+            <a href="https://github.com/AnhNgoo/PRO124-QAK.git" target="_blank"
+                class="inline-flex items-center px-8 py-4 bg-transparent border-2 border-blue-500 text-blue-400 font-bold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 text-lg shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.6)]">
+                <i class="fab fa-github mr-3 text-2xl"></i> Xem Code Giao Diện trên GitHub
+            </a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-800 bg-dark py-6 mt-10">
+        <div class="text-center text-sm text-gray-500">
+            <p>&copy; 2024 Ngô Quốc Anh (AGDev). Tự hào Code bằng đam mê.</p>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out-cubic',
+            offset: 50,
+        });
+    </script>
+</body>
+
+</html>

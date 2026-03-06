@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG10 Rogue Defense - AGDev</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome cho Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-img {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body class="font-body antialiased relative">
+
+    <!-- Lưới nền grid mờ giống Cyberpunk -->
+    <div class="fixed inset-0 z-[-1] opacity-10"
+        style="background-image: linear-gradient(#10b981 1px, transparent 1px), linear-gradient(90deg, #10b981 1px, transparent 1px); background-size: 30px 30px;">
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 top-0 bg-dark/80 backdrop-blur-md border-b border-neon/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center text-gray-300 hover:text-neon transition-colors">
+                        <i class="fas fa-arrow-left mr-2"></i> <span class="font-bold">Back to Portfolio</span>
+                    </a>
+                </div>
+                <div>
+                    <span class="font-heading text-xl font-bold text-neon">AG10-RogueDefense</span>
+                </div>
+                <div>
+                    <a href="https://github.com/AnhNgoo/AG10-RogueDefense.git" target="_blank"
+                        class="text-gray-300 hover:text-neon text-2xl transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="pt-24 pb-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- HEADER -->
+        <header class="text-center mb-12" data-aos="fade-down">
+            <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4 drop-shadow-lg">AG10<span
+                    class="text-neon">-RogueDefense</span></h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Dự án Solo game chiến thuật thủ thành kết hợp với yếu tố Rogue-like.
+            </p>
+            <div class="flex justify-center flex-wrap gap-3 mt-6">
+                <span
+                    class="px-3 py-1 bg-neon/10 border border-neon/50 text-neon rounded-full text-sm font-bold shadow-[0_0_10px_rgba(16,185,129,0.2)]">Unity
+                    3D</span>
+                <span
+                    class="px-3 py-1 bg-neon/10 border border-neon/50 text-neon rounded-full text-sm font-bold shadow-[0_0_10px_rgba(16,185,129,0.2)]">C#</span>
+                <span
+                    class="px-3 py-1 bg-neon/10 border border-neon/50 text-neon rounded-full text-sm font-bold shadow-[0_0_10px_rgba(16,185,129,0.2)]">Game
+                    Design</span>
+                <span
+                    class="px-3 py-1 bg-neon/10 border border-neon/50 text-neon rounded-full text-sm font-bold shadow-[0_0_10px_rgba(16,185,129,0.2)]">Tower
+                    Defense</span>
+                <span
+                    class="px-3 py-1 bg-neon/10 border border-neon/50 text-neon rounded-full text-sm font-bold shadow-[0_0_10px_rgba(16,185,129,0.2)]">Rogue-like</span>
+            </div>
+        </header>
+
+        <!-- TRAILER / GAMEPLAY VIDEO -->
+        <section class="mb-16" data-aos="zoom-in" data-aos-delay="200">
+            <div class="bg-panel p-2 border border-gray-800 rounded-2xl shadow-panel">
+                <div class="video-container">
+                    <video controls autoplay muted loop>
+                        <source src="video/AG10/0306.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT DESCRIPTION -->
+        <section class="mb-16 bg-panel border border-neon/20 rounded-2xl p-8 shadow-panel" data-aos="fade-up">
+            <h2 class="text-3xl font-heading font-bold text-white mb-6 border-b border-gray-700 pb-4">
+                <i class="fas fa-info-circle text-neon mr-2"></i> Chi tiết Dự án
+            </h2>
+            <div class="space-y-4 text-lg text-gray-300">
+                <p>
+                    <strong>AG10-RogueDefense</strong> mang tới sự pha trộn giữ thể loại thủ thành (Tower Defense) quen
+                    thuộc và tính ngẫu nhiên, giá trị chơi lại cao của Rogue-like.
+                    Người chơi phải đối mặt với các đợt quái vật liên tục, phân bổ tài nguyên để xây dựng tháp, nâng cấp
+                    và lựa chọn các kỹ năng/buff xuất hiện ngẫu nhiên sau mỗi đợt.
+                </p>
+                <ul class="list-disc pl-6 space-y-2 mt-4">
+                    <li><strong class="text-neon">Cơ chế kỹ năng ngẫu nhiên:</strong> Hệ thống chọn buff/skill ngẫu
+                        nhiên (Rogue-like elements) giúp tạo ra các build khác nhau trong mỗi lần chơi.</li>
+                    <li><strong class="text-neon">Đa dạng tháp phòng thủ:</strong> Mỗi loại tháp có cơ chế tấn công đặc
+                        trưng, yêu cầu tính chiến thuật trong việc sắp xếp đội hình.</li>
+                    <li><strong class="text-neon">Thiết kế Wave (Đợt quái):</strong> Các đợt quái có mức độ khó tăng
+                        dần, bao gồm Boss đặc biệt và các loại quái có khả năng khắc chế tháp phòng thủ.</li>
+                    <li><strong class="text-neon">UI/UX Hiện đại:</strong> Hệ thống giao diện, hiệu ứng Particle,
+                        Feedback âm thanh được đầu tư tỉ mỉ để tạo cảm giác "lực" khi kết liễu quái vật.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-heading font-bold text-white mb-8 border-l-4 border-neon pl-4"
+                data-aos="fade-right">
+                Hình Ảnh Trong Game
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="100">
+                    <img src="image/AG10/1.png" alt="Gameplay screenshot 1"
+                        class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="200">
+                    <img src="image/AG10/2.png" alt="Gameplay screenshot 2"
+                        class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="300">
+                    <img src="image/AG10/3.png" alt="Gameplay screenshot 3"
+                        class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="100">
+                    <img src="image/AG10/4.png" alt="Gameplay screenshot 4"
+                        class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group"
+                    data-aos="flip-up" data-aos-delay="200">
+                    <img src="image/AG10/5.png" alt="Gameplay screenshot 5"
+                        class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div data-aos="flip-up" data-aos-delay="300"
+                    class="bg-panel border border-gray-800 rounded-xl overflow-hidden shadow-md group border-blue-500/50 relative">
+                    <div class="absolute inset-0 bg-blue-900/20 z-0 pointer-events-none"></div>
+                    <img src="image/AG10/Trello.png" alt="Trello Planning"
+                        class="w-full h-48 object-cover gallery-img relative z-10">
+                    <div
+                        class="absolute bottom-0 w-full bg-dark/80 text-center py-2 text-xs font-bold text-blue-300 z-10 pointer-events-none">
+                        Dự án được quản lý qua Trello
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <div class="text-center" data-aos="zoom-in">
+            <a href="https://github.com/AnhNgoo/AG10-RogueDefense.git" target="_blank"
+                class="inline-flex items-center px-8 py-4 bg-neon text-dark font-bold rounded-lg hover:bg-green-400 hover:shadow-neon-hover transition-all duration-300 transform hover:-translate-y-1 text-lg">
+                <i class="fab fa-github mr-3 text-2xl"></i> Xem Source Code trên GitHub
+            </a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-800 bg-dark py-6 mt-10">
+        <div class="text-center text-sm text-gray-500">
+            <p>&copy; 2024 Ngô Quốc Anh (AGDev). Tự hào Code bằng đam mê.</p>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out-cubic',
+            offset: 50,
+        });
+    </script>
+</body>
+
+</html>

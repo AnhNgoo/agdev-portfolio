@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume CV - AGDev</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome cho Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="font-body antialiased relative">
+
+    <!-- Lưới nền grid mờ giống Cyberpunk -->
+    <div class="fixed inset-0 z-[-1] opacity-10"
+        style="background-image: linear-gradient(#10b981 1px, transparent 1px), linear-gradient(90deg, #10b981 1px, transparent 1px); background-size: 30px 30px;">
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 top-0 bg-dark/80 backdrop-blur-md border-b border-neon/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html"
+                        class="font-heading text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-neon to-green-300 glitch-hover">
+                        AGDev
+                    </a>
+                </div>
+                <!-- Menu Desktop -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html#home"
+                            class="hover:text-neon hover:shadow-neon px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Home</a>
+                        <a href="index.html#projects"
+                            class="hover:text-neon hover:shadow-neon px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Projects</a>
+                        <a href="index.html#contact"
+                            class="hover:text-neon hover:shadow-neon px-3 py-2 rounded-md text-sm font-medium transition-all duration-300">Contact</a>
+                        <a href="resume.html"
+                            class="px-4 py-2 rounded-md text-sm font-bold transition-all duration-300 border border-neon text-neon shadow-[0_0_10px_rgba(16,185,129,0.8)] hover:bg-neon hover:text-dark hover:shadow-[0_0_20px_rgba(16,185,129,1)] relative overflow-hidden group">
+                            <span class="relative z-10 drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]">Resume CV</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-neon focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-panel border-b border-neon/30">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="index.html#home"
+                    class="block hover:text-neon hover:bg-dark px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="index.html#projects"
+                    class="block hover:text-neon hover:bg-dark px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="index.html#contact"
+                    class="block hover:text-neon hover:bg-dark px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="resume.html"
+                    class="block mt-2 px-3 py-2 rounded-md text-base font-bold bg-dark border border-neon text-neon shadow-[0_0_10px_rgba(16,185,129,0.5)]">Resume
+                    CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="pt-24 pb-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <header class="text-center mb-10 flex flex-col items-center" data-aos="fade-down">
+            <h1
+                class="text-4xl md:text-5xl font-heading font-bold text-white mb-6 drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]">
+                My <span class="text-neon">Resume & CV</span>
+            </h1>
+            <a href="image/CV/CV Game Dev.pdf" download="Ngo_Quoc_Anh_CV_GameDev.pdf"
+                class="inline-flex items-center px-6 py-3 bg-neon text-dark font-bold rounded-lg hover:bg-green-400 hover:shadow-neon-hover transition-all duration-300 transform hover:-translate-y-1 text-lg">
+                <i class="fas fa-download mr-3"></i> Tải Xuống PDF (Download)
+            </a>
+        </header>
+
+        <section class="mb-16 w-full flex justify-center" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- RAW HTML CV CONTAINER -->
+            <div
+                class="bg-panel border border-neon/30 text-gray-300 w-full max-w-4xl p-8 md:p-12 shadow-[0_0_20px_rgba(16,185,129,0.3)] rounded-lg relative overflow-hidden font-body text-base group/cv transition-all duration-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:border-neon">
+
+                <!-- HEADER CV -->
+                <div
+                    class="flex flex-col md:flex-row items-center md:items-start md:justify-between border-b-2 border-neon pb-6 mb-8 group-hover/cv:border-green-400 transition-colors duration-500">
+                    <div class="text-center md:text-left mb-6 md:mb-0">
+                        <h2
+                            class="text-4xl md:text-5xl font-heading font-bold text-white mb-2 uppercase tracking-wide drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
+                            Ngô Quốc Anh</h2>
+                        <h3 class="text-xl md:text-2xl text-neon font-bold tracking-widest uppercase animate-pulse">Game
+                            Developer
+                        </h3>
+                    </div>
+
+                    <div class="flex flex-col space-y-2 text-sm md:text-right">
+                        <div
+                            class="flex items-center md:justify-end gap-2 text-gray-400 hover:text-white transition-colors duration-300 cursor-default">
+                            <i
+                                class="fas fa-envelope text-neon w-5 text-center drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]"></i>
+                            <span>nqa9926@gmail.com</span>
+                        </div>
+                        <div
+                            class="flex items-center md:justify-end gap-2 text-gray-400 hover:text-white transition-colors duration-300 cursor-default">
+                            <i
+                                class="fas fa-phone text-neon w-5 text-center drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]"></i>
+                            <span>Liên hệ qua Email/Facebook</span>
+                        </div>
+                        <div
+                            class="flex items-center md:justify-end gap-2 text-gray-400 hover:text-white transition-colors duration-300 cursor-default">
+                            <i
+                                class="fas fa-map-marker-alt text-neon w-5 text-center drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]"></i>
+                            <span>Đà Nẵng, Việt Nam</span>
+                        </div>
+                        <div class="flex items-center md:justify-end gap-2 text-gray-400">
+                            <i
+                                class="fab fa-github text-neon w-5 text-center drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]"></i>
+                            <a href="https://github.com/AnhNgoo" target="_blank"
+                                class="hover:text-neon hover:underline transition-all duration-300">github.com/AnhNgoo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAIN TWO-COLUMN LAYOUT -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                    <!-- LEFT COLUMN (Profile, Skills, Education) -->
+                    <div class="md:col-span-1 space-y-8" data-aos="fade-right" data-aos-delay="400">
+
+                        <!-- PROFILE SUMMARY -->
+                        <div class="group/section hover:-translate-y-1 transition-transform duration-300">
+                            <h4
+                                class="text-lg font-heading font-bold text-white uppercase border-b border-gray-700 group-hover/section:border-neon pb-2 mb-4 flex items-center transition-colors duration-300">
+                                <i class="fas fa-user text-neon mr-2 group-hover/section:animate-bounce"></i> Profile
+                            </h4>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Sinh viên chuyên ngành Lập trình Game tại FPT Polytechnic Đà Nẵng. Đam mê mãnh liệt với
+                                việc xây dựng hệ thống logic của game và thiết kế UI/UX nhằm tạo ra trải nghiệm mượt mà,
+                                cuốn hút cho người chơi. Kiên trì, không ngại học hỏi các công nghệ mới và liên tục nâng
+                                cao kỹ năng tối ưu mã nguồn.
+                            </p>
+                        </div>
+
+                        <!-- CORE SKILLS -->
+                        <div class="group/section hover:-translate-y-1 transition-transform duration-300">
+                            <h4
+                                class="text-lg font-heading font-bold text-white uppercase border-b border-gray-700 group-hover/section:border-neon pb-2 mb-4 flex items-center transition-colors duration-300">
+                                <i class="fas fa-tools text-neon mr-2 group-hover/section:animate-spin"></i> Skills
+                            </h4>
+
+                            <div class="space-y-4">
+                                <div class="group/skill">
+                                    <div
+                                        class="flex justify-between text-sm font-semibold text-gray-300 mb-1 group-hover/skill:text-white transition-colors">
+                                        <span>Unity 3D / 2D</span>
+                                        <span
+                                            class="text-neon opacity-0 group-hover/skill:opacity-100 transition-opacity">80%</span>
+                                    </div>
+                                    <div
+                                        class="w-full bg-gray-700 rounded-full h-1.5 overflow-hidden border border-gray-600">
+                                        <div
+                                            class="bg-neon h-1.5 rounded-full group-hover/skill:shadow-[0_0_10px_rgba(16,185,129,0.8)] transition-all duration-300 relative w-[80%]">
+                                            <div class="absolute top-0 left-0 w-full h-full bg-white/20 animate-pulse">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="group/skill">
+                                    <div
+                                        class="flex justify-between text-sm font-semibold text-gray-300 mb-1 group-hover/skill:text-white transition-colors">
+                                        <span>C# Programming</span>
+                                        <span
+                                            class="text-neon opacity-0 group-hover/skill:opacity-100 transition-opacity">75%</span>
+                                    </div>
+                                    <div
+                                        class="w-full bg-gray-700 rounded-full h-1.5 overflow-hidden border border-gray-600">
+                                        <div
+                                            class="bg-neon h-1.5 rounded-full group-hover/skill:shadow-[0_0_10px_rgba(16,185,129,0.8)] transition-all duration-300 relative w-[75%]">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="group/skill">
+                                    <div
+                                        class="flex justify-between text-sm font-semibold text-gray-300 mb-1 group-hover/skill:text-white transition-colors">
+                                        <span>Git / GitHub</span>
+                                        <span
+                                            class="text-neon opacity-0 group-hover/skill:opacity-100 transition-opacity">75%</span>
+                                    </div>
+                                    <div
+                                        class="w-full bg-gray-700 rounded-full h-1.5 overflow-hidden border border-gray-600">
+                                        <div
+                                            class="bg-neon h-1.5 rounded-full group-hover/skill:shadow-[0_0_10px_rgba(16,185,129,0.8)] transition-all duration-300 relative w-[75%]">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="group/skill">
+                                    <div
+                                        class="flex justify-between text-sm font-semibold text-gray-300 mb-1 group-hover/skill:text-white transition-colors">
+                                        <span>UI / UX Design</span>
+                                        <span
+                                            class="text-neon opacity-0 group-hover/skill:opacity-100 transition-opacity">70%</span>
+                                    </div>
+                                    <div
+                                        class="w-full bg-gray-700 rounded-full h-1.5 overflow-hidden border border-gray-600">
+                                        <div
+                                            class="bg-neon h-1.5 rounded-full group-hover/skill:shadow-[0_0_10px_rgba(16,185,129,0.8)] transition-all duration-300 relative w-[70%]">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="group/skill">
+                                    <div
+                                        class="flex justify-between text-sm font-semibold text-gray-300 mb-1 group-hover/skill:text-white transition-colors">
+                                        <span>Web (HTML/CSS)</span>
+                                        <span
+                                            class="text-neon opacity-0 group-hover/skill:opacity-100 transition-opacity">65%</span>
+                                    </div>
+                                    <div
+                                        class="w-full bg-gray-700 rounded-full h-1.5 overflow-hidden border border-gray-600">
+                                        <div
+                                            class="bg-neon h-1.5 rounded-full group-hover/skill:shadow-[0_0_10px_rgba(16,185,129,0.8)] transition-all duration-300 relative w-[65%]">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="group/skill">
+                                    <div
+                                        class="flex justify-between text-sm font-semibold text-gray-300 mb-1 group-hover/skill:text-white transition-colors">
+                                        <span>Blender & Trello</span>
+                                        <span
+                                            class="text-neon opacity-0 group-hover/skill:opacity-100 transition-opacity">50%</span>
+                                    </div>
+                                    <div
+                                        class="w-full bg-gray-700 rounded-full h-1.5 overflow-hidden border border-gray-600">
+                                        <div
+                                            class="bg-neon h-1.5 rounded-full group-hover/skill:shadow-[0_0_10px_rgba(16,185,129,0.8)] transition-all duration-300 relative w-[50%]">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EDUCATION -->
+                        <div class="group/section hover:-translate-y-1 transition-transform duration-300">
+                            <h4
+                                class="text-lg font-heading font-bold text-white uppercase border-b border-gray-700 group-hover/section:border-neon pb-2 mb-4 flex items-center transition-colors duration-300">
+                                <i
+                                    class="fas fa-graduation-cap text-neon mr-2 group-hover/section:-rotate-12 transition-transform"></i>
+                                Education
+                            </h4>
+                            <div
+                                class="mb-3 bg-dark/50 p-4 rounded-lg border border-gray-700 hover:border-neon/50 transition-colors duration-300 relative overflow-hidden">
+                                <div
+                                    class="absolute top-0 right-0 w-16 h-16 bg-neon/5 rounded-full -mt-8 -mr-8 blur-md">
+                                </div>
+                                <h5 class="font-bold text-white text-sm">FPT Polytechnic Da Nang</h5>
+                                <p class="text-neon font-semibold text-xs mb-1">Chuyên ngành Lập trình Game</p>
+                                <p class="text-gray-500 text-xs italic">2024 - Hiện tại</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT COLUMN (Experience/Projects) -->
+                    <div class="md:col-span-2 space-y-8" data-aos="fade-left" data-aos-delay="600">
+
+                        <!-- FEATURED PROJECTS -->
+                        <div class="group/section">
+                            <h4
+                                class="text-xl font-heading font-bold text-white uppercase border-b-2 border-neon/50 group-hover/section:border-neon pb-2 mb-6 flex items-center transition-colors duration-300">
+                                <i class="fas fa-gamepad text-neon mr-2 group-hover/section:animate-pulse"></i> Featured
+                                Projects
+                            </h4>
+
+                            <!-- Project 1 -->
+                            <div
+                                class="mb-6 relative group/proj hover:bg-dark/40 p-4 rounded-xl border border-transparent hover:border-gray-700 transition-all duration-300 -ml-4">
+                                <div
+                                    class="absolute left-0 top-6 w-2 h-2 rounded-full bg-neon group-hover/proj:shadow-[0_0_10px_rgba(16,185,129,1)] transition-shadow">
+                                </div>
+                                <div class="pl-4">
+                                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+                                        <h5
+                                            class="text-lg font-bold text-white group-hover/proj:text-neon transition-colors">
+                                            AG10 - Rogue Defense</h5>
+                                        <span
+                                            class="text-xs font-bold text-dark bg-neon/90 px-2 py-1 rounded shadow-[0_0_8px_rgba(16,185,129,0.5)]">Solo
+                                            Project</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <p class="text-sm text-gray-400 font-semibold uppercase">Unity 3D | C# | Tower
+                                            Defense | Rogue-like</p>
+                                        <a href="https://github.com/AnhNgoo/AG10-RogueDefense.git" target="_blank"
+                                            class="text-gray-400 hover:text-neon text-lg transition-colors"><i
+                                                class="fab fa-github"></i> source</a>
+                                    </div>
+                                    <ul
+                                        class="list-disc list-inside text-sm text-gray-400 space-y-1 ml-1 marker:text-neon">
+                                        <li>Tự tay thiết kế và lập trình toàn bộ logic game từ số không.</li>
+                                        <li>Triển khai hệ thống sinh quái (Spawner) dựa trên Wave đếm ngược.</li>
+                                        <li>Xây dựng cơ chế nâng cấp kỹ năng theo chuỗi (Rogue-like mechanics) với tỷ lệ
+                                            rớt ngẫu nhiên.</li>
+                                        <li>Sử dụng Object Pooling chuẩn hóa quản lý hàng nghìn đạn/quái mà không gây
+                                            drop FPS.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Project 2 -->
+                            <div
+                                class="mb-6 relative group/proj hover:bg-dark/40 p-4 rounded-xl border border-transparent hover:border-gray-700 transition-all duration-300 -ml-4">
+                                <div
+                                    class="absolute left-0 top-6 w-2 h-2 rounded-full bg-blue-500 group-hover/proj:shadow-[0_0_10px_rgba(59,130,246,1)] transition-shadow">
+                                </div>
+                                <div class="pl-4">
+                                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+                                        <h5
+                                            class="text-lg font-bold text-white group-hover/proj:text-blue-400 transition-colors">
+                                            PRO124 - QAK</h5>
+                                        <span
+                                            class="text-xs font-bold text-white bg-blue-600/90 px-2 py-1 rounded shadow-[0_0_8px_rgba(59,130,246,0.5)]">Team
+                                            Project</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <p class="text-sm text-gray-400 font-semibold uppercase">UI Programmer |
+                                            Interaction Designer</p>
+                                        <a href="https://github.com/AnhNgoo/PRO124-QAK.git" target="_blank"
+                                            class="text-gray-400 hover:text-blue-400 text-lg transition-colors"><i
+                                                class="fab fa-github"></i> source</a>
+                                    </div>
+                                    <ul
+                                        class="list-disc list-inside text-sm text-gray-400 space-y-1 ml-1 marker:text-blue-500">
+                                        <li>Thiết kế hệ thống giao diện Menu, Cài đặt, và HUD in-game theo phong cách
+                                            hiện đại.</li>
+                                        <li>Lập trình các Script xử lý Animation chuyển Scene, Popup mượt mà.</li>
+                                        <li>Tối ưu hóa EventSystem và Canvas Rendering giảm draw call cho UI.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Project 3 -->
+                            <div
+                                class="mb-4 relative group/proj hover:bg-dark/40 p-4 rounded-xl border border-transparent hover:border-gray-700 transition-all duration-300 -ml-4">
+                                <div
+                                    class="absolute left-0 top-6 w-2 h-2 rounded-full bg-green-500 group-hover/proj:shadow-[0_0_10px_rgba(34,197,94,1)] transition-shadow">
+                                </div>
+                                <div class="pl-4">
+                                    <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+                                        <h5
+                                            class="text-lg font-bold text-white group-hover/proj:text-green-400 transition-colors">
+                                            AG08 - GrassLand</h5>
+                                        <span
+                                            class="text-xs font-bold text-dark bg-green-500/90 px-2 py-1 rounded shadow-[0_0_8px_rgba(34,197,94,0.5)]">Solo
+                                            Project</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <p class="text-sm text-gray-400 font-semibold uppercase">Unity 3D | Open World |
+                                            Story-driven RPG</p>
+                                        <a href="https://github.com/AnhNgoo/AG08_GrassLand.git" target="_blank"
+                                            class="text-gray-400 hover:text-green-400 text-lg transition-colors"><i
+                                                class="fab fa-github"></i> source</a>
+                                    </div>
+                                    <ul
+                                        class="list-disc list-inside text-sm text-gray-400 space-y-1 ml-1 marker:text-green-500">
+                                        <li>Xây dựng thế giới mở quy mô nhỏ với hệ thống Terrain, cây cỏ và thời tiết
+                                            động.</li>
+                                        <li>Viết hệ thống Nhiệm vụ (Quest System) có lưu trữ tiến trình đơn giản.</li>
+                                        <li>Cấu hình Cinemachine tạo các đoạn Cutscene dẫn dắt cốt truyện in-game.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-800 bg-dark py-6 mt-10">
+        <div class="text-center text-sm text-gray-500">
+            <p>&copy; 2024 Ngô Quốc Anh (AGDev). Tự hào Code bằng đam mê.</p>
+        </div>
+    </footer>
+
+    <!-- Script điều khiển Mobile Menu -->
+    <script src="js/main.js"></script>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out-cubic',
+            offset: 50,
+        });
+    </script>
+</body>
+
+</html>
