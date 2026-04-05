@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenMoney - AGDev</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome cho Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <script src="js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .gallery-img {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 18px rgba(16, 185, 129, 0.45);
+            z-index: 10;
+        }
+
+        .phone-frame {
+            background: linear-gradient(145deg, rgba(17, 24, 39, 0.95), rgba(10, 15, 22, 0.95));
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: 1.25rem;
+            overflow: hidden;
+        }
+
+        .gallery-modal {
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+
+        .gallery-modal img {
+            max-height: 86vh;
+            width: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body class="font-body antialiased relative">
+
+    <div class="fixed inset-0 z-[-1] opacity-10"
+        style="background-image: linear-gradient(#10b981 1px, transparent 1px), linear-gradient(90deg, #10b981 1px, transparent 1px); background-size: 30px 30px;">
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 top-0 bg-dark/80 backdrop-blur-md border-b border-neon/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center text-gray-300 hover:text-neon transition-colors">
+                        <i class="fas fa-arrow-left mr-2"></i> <span class="font-bold">Back to Portfolio</span>
+                    </a>
+                </div>
+                <div>
+                    <span class="font-heading text-xl font-bold text-neon">ZenMoney</span>
+                </div>
+                <div>
+                    <a href="https://github.com/AnhNgoo/Zenmoney.git" target="_blank"
+                        class="text-gray-300 hover:text-neon text-2xl transition-colors" aria-label="ZenMoney GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="pt-24 pb-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- HEADER -->
+        <header class="text-center mb-12" data-aos="fade-down">
+            <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4 drop-shadow-lg">Zen<span
+                    class="text-neon">Money</span></h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Ứng dụng quản lý tài chính cá nhân theo phong cách dark hiện đại, tập trung vào nhập liệu nhanh,
+                báo cáo trực quan và trợ lý AI tư vấn chi tiêu.
+            </p>
+            <div class="flex justify-center flex-wrap gap-3 mt-6">
+                <span
+                    class="px-3 py-1 bg-neon/10 border border-neon/50 text-neon rounded-full text-sm font-bold shadow-[0_0_10px_rgba(16,185,129,0.2)]">Mobile
+                    App</span>
+                <span
+                    class="px-3 py-1 bg-neon/10 border border-neon/50 text-neon rounded-full text-sm font-bold shadow-[0_0_10px_rgba(16,185,129,0.2)]">UI/UX</span>
+                <span
+                    class="px-3 py-1 bg-neon/10 border border-neon/50 text-neon rounded-full text-sm font-bold shadow-[0_0_10px_rgba(16,185,129,0.2)]">Personal
+                    Finance</span>
+                <span
+                    class="px-3 py-1 bg-neon/10 border border-neon/50 text-neon rounded-full text-sm font-bold shadow-[0_0_10px_rgba(16,185,129,0.2)]">AI
+                    Assistant</span>
+            </div>
+        </header>
+
+        <!-- OVERVIEW -->
+        <section class="mb-16 bg-panel border border-neon/20 rounded-2xl p-8 shadow-panel" data-aos="fade-up">
+            <h2 class="text-3xl font-heading font-bold text-white mb-6 border-b border-gray-700 pb-4">
+                <i class="fas fa-wallet text-neon mr-2"></i> Tổng quan dự án
+            </h2>
+            <div class="space-y-4 text-lg text-gray-300">
+                <p>
+                    <strong>ZenMoney</strong> được xây dựng để người dùng theo dõi thu chi hàng ngày theo cách đơn giản,
+                    dễ dùng nhưng vẫn có chiều sâu phân tích. Giao diện dark kết hợp màu nhấn xanh neon giúp tập trung vào dữ liệu quan trọng.
+                </p>
+                <ul class="list-disc pl-6 space-y-2 mt-4 marker:text-neon">
+                    <li>Onboarding nhanh: nhập tên, ngày sinh, giới tính, số dư ban đầu để bắt đầu trong vài giây.</li>
+                    <li>Màn hình tổng quan: thẻ số dư, gợi ý tài chính, thao tác nhanh và điều hướng một tay.</li>
+                    <li>Phân tích theo tuần/tháng: theo dõi Thu, Chi, Lời và biểu đồ lịch sử 7 ngày gần nhất.</li>
+                    <li>AI Chat: gợi ý cách lập ngân sách, phân tích chi tiêu và hỗ trợ ra quyết định tài chính.</li>
+                    <li>Cài đặt linh hoạt: dark mode, nhập nhanh x1000, thông báo hằng ngày và đồng bộ Google Drive.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- KEY SCREENS -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-heading font-bold text-white mb-8 border-l-4 border-neon pl-4" data-aos="fade-right">
+                Các màn hình chính
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="phone-frame p-2" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="image/ZenMoney/1.jpg" alt="ZenMoney Home" class="w-full h-[420px] object-cover rounded-xl gallery-img">
+                </div>
+                <div class="phone-frame p-2" data-aos="zoom-in" data-aos-delay="150">
+                    <img src="image/ZenMoney/2.jpg" alt="ZenMoney Onboarding" class="w-full h-[420px] object-cover rounded-xl gallery-img">
+                </div>
+                <div class="phone-frame p-2" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="image/ZenMoney/3.jpg" alt="ZenMoney Settings" class="w-full h-[420px] object-cover rounded-xl gallery-img">
+                </div>
+                <div class="phone-frame p-2" data-aos="zoom-in" data-aos-delay="250">
+                    <img src="image/ZenMoney/4.jpg" alt="ZenMoney Analytics" class="w-full h-[420px] object-cover rounded-xl gallery-img">
+                </div>
+                <div class="phone-frame p-2" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="image/ZenMoney/5.jpg" alt="ZenMoney AI Chat" class="w-full h-[420px] object-cover rounded-xl gallery-img">
+                </div>
+                <div class="phone-frame p-2" data-aos="zoom-in" data-aos-delay="350">
+                    <img src="image/ZenMoney/6.jpg" alt="ZenMoney About" class="w-full h-[420px] object-cover rounded-xl gallery-img">
+                </div>
+            </div>
+
+            <div class="max-w-sm mx-auto mt-6 phone-frame p-2" data-aos="zoom-in" data-aos-delay="400">
+                <img src="image/ZenMoney/7.jpg" alt="ZenMoney Scan Bill" class="w-full h-[420px] object-cover rounded-xl gallery-img">
+            </div>
+        </section>
+
+        <!-- TECHNICAL HIGHLIGHTS -->
+        <section class="mb-10 bg-panel border border-neon/20 rounded-2xl p-8 shadow-panel" data-aos="fade-up">
+            <h2 class="text-3xl font-heading font-bold text-white mb-6 border-b border-gray-700 pb-4">
+                <i class="fas fa-code text-neon mr-2"></i> Điểm nhấn kỹ thuật
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
+                <div class="bg-dark/60 border border-gray-700 rounded-xl p-5">
+                    <h3 class="text-lg font-bold text-white mb-2">Thiết kế trải nghiệm</h3>
+                    <p>Thiết kế mobile-first, tối ưu thao tác bằng ngón tay cái, giảm số bước nhập liệu để tạo thói quen theo dõi thu chi mỗi ngày.</p>
+                </div>
+                <div class="bg-dark/60 border border-gray-700 rounded-xl p-5">
+                    <h3 class="text-lg font-bold text-white mb-2">Kiến trúc tính năng</h3>
+                    <p>Phân tách rõ module Tổng quan, Phân tích, Trợ lý AI và Cài đặt để dễ mở rộng thêm tính năng mà không ảnh hưởng luồng hiện tại.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center" data-aos="zoom-in">
+            <a href="https://github.com/AnhNgoo/Zenmoney.git" target="_blank"
+                class="inline-flex items-center px-8 py-4 bg-neon text-dark font-bold rounded-lg hover:bg-green-400 hover:shadow-neon-hover transition-all duration-300 transform hover:-translate-y-1 text-lg">
+                <i class="fab fa-github mr-3 text-2xl"></i> Xem Source Code ZenMoney
+            </a>
+        </div>
+    </main>
+
+    <!-- IMAGE MODAL -->
+    <div id="gallery-modal" class="hidden fixed inset-0 z-[100] bg-black/90 gallery-modal">
+        <button id="gallery-close"
+            class="absolute top-4 right-4 text-white/90 hover:text-neon text-3xl w-12 h-12 rounded-full border border-white/20 hover:border-neon transition-colors"
+            aria-label="Đóng ảnh">
+            <i class="fas fa-xmark"></i>
+        </button>
+
+        <button id="gallery-prev"
+            class="absolute left-3 md:left-8 top-1/2 -translate-y-1/2 text-white/90 hover:text-neon text-2xl md:text-3xl w-12 h-12 rounded-full border border-white/20 hover:border-neon transition-colors"
+            aria-label="Ảnh trước">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <button id="gallery-next"
+            class="absolute right-3 md:right-8 top-1/2 -translate-y-1/2 text-white/90 hover:text-neon text-2xl md:text-3xl w-12 h-12 rounded-full border border-white/20 hover:border-neon transition-colors"
+            aria-label="Ảnh sau">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="w-full h-full flex items-center justify-center px-4 md:px-20 py-16">
+            <img id="gallery-modal-img" src="" alt="ZenMoney full-size preview" class="rounded-xl border border-neon/30 shadow-[0_0_30px_rgba(16,185,129,0.35)]">
+        </div>
+
+        <div id="gallery-counter"
+            class="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm md:text-base text-white/90 bg-dark/80 border border-neon/30 px-4 py-2 rounded-full">
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-800 bg-dark py-6 mt-10">
+        <div class="text-center text-sm text-gray-500">
+            <p>&copy; 2026 Ngô Quốc Anh (AGDev). Tự hào Code bằng đam mê.</p>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out-cubic',
+            offset: 50,
+        });
+
+        const galleryModal = document.getElementById('gallery-modal');
+        const galleryModalImg = document.getElementById('gallery-modal-img');
+        const galleryCounter = document.getElementById('gallery-counter');
+        const galleryClose = document.getElementById('gallery-close');
+        const galleryPrev = document.getElementById('gallery-prev');
+        const galleryNext = document.getElementById('gallery-next');
+        const galleryImages = Array.from(document.querySelectorAll('.gallery-img'));
+        let currentGalleryIndex = 0;
+
+        function openGalleryModal(index) {
+            currentGalleryIndex = index;
+            updateGalleryModal();
+            galleryModal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeGalleryModal() {
+            galleryModal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        function updateGalleryModal() {
+            const currentImage = galleryImages[currentGalleryIndex];
+            galleryModalImg.src = currentImage.src;
+            galleryModalImg.alt = currentImage.alt;
+            galleryCounter.textContent = `${currentGalleryIndex + 1} / ${galleryImages.length}`;
+        }
+
+        function showPrevImage() {
+            currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateGalleryModal();
+        }
+
+        function showNextImage() {
+            currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+            updateGalleryModal();
+        }
+
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', () => openGalleryModal(index));
+        });
+
+        galleryClose.addEventListener('click', closeGalleryModal);
+        galleryPrev.addEventListener('click', showPrevImage);
+        galleryNext.addEventListener('click', showNextImage);
+
+        galleryModal.addEventListener('click', (event) => {
+            if (event.target === galleryModal) {
+                closeGalleryModal();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (galleryModal.classList.contains('hidden')) {
+                return;
+            }
+
+            if (event.key === 'Escape') {
+                closeGalleryModal();
+            }
+
+            if (event.key === 'ArrowLeft') {
+                showPrevImage();
+            }
+
+            if (event.key === 'ArrowRight') {
+                showNextImage();
+            }
+        });
+    </script>
+</body>
+
+</html>
